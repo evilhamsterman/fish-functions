@@ -3,7 +3,7 @@ function readenv --on-variable PWD
     if test -r (_enhancd_history_open)[-1]/.env
         while read -l line
             set -l kv (string split -m 1 = -- $line)
-            set -eg $kv
+            set -eg $kv[1]
         end < (_enhancd_history_open)[-1]/.env
     end
     # Set variables in current directory
