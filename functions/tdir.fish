@@ -1,5 +1,5 @@
 function tdir
-      set dir (mkdir -d)
+      set dir (mktemp -d tmpdir.XXXX)
       set cur_dir $PWD
       cd $dir
       fish
